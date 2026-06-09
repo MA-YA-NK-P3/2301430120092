@@ -41,10 +41,8 @@ export default function PriorityInboxPage() {
       setLoading(true);
       setError(null);
 
-      // Fetch notifications from the API
-      const response = await fetch(
-        "http://4.224.186.213/evaluation-service/notifications"
-      );
+      // Fetch notifications from the local API route
+      const response = await fetch("/api/notifications");
 
       if (!response.ok) {
         throw new Error(`API Error: ${response.status}`);

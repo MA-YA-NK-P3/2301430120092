@@ -119,10 +119,12 @@ Browse complete notification history with advanced filtering:
 
 ## API Integration
 
-The application connects to:
+The application uses an internal local API route for notifications:
 ```
-http://4.224.186.213/evaluation-service/notifications
+/api/notifications
 ```
+
+This allows the frontend to work independently without relying on an external service.
 
 ### Response Format
 

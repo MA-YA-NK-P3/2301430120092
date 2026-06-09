@@ -45,9 +45,7 @@ export default function AllNotificationsPage() {
       setLoading(true);
       setError(null);
 
-      const response = await fetch(
-        "http://4.224.186.213/evaluation-service/notifications"
-      );
+      const response = await fetch("/api/notifications");
 
       if (!response.ok) {
         throw new Error(`API Error: ${response.status}`);
